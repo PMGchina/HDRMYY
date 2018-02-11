@@ -1,0 +1,76 @@
+* {margin:0;padding:0;font-family:"Microsoft YaHei";color:#286090}
+
+@media screen and (min-width:769px) {
+   .container-fluid{width:768px}
+   .my-footer{width:768px}
+   *{font-size:20px}
+   .page-header{font-size:22px;line-height:22px}
+   .row{margin:0 auto}
+   .my-col-option span{font-size:20px}
+}
+@media screen and (max-width:768px) and (min-width:481px) {
+   .container-fluid{padding:0 2px}
+   *{font-size:18px}
+   .panel-heading span{font-size:20px;line-height:20px}
+   .panel-body{padding:3px 3px 3px 8px}
+   .page-header span{font-size:20px;line-height:20px}
+   .row{margin:0 auto}
+   .my-col-option span{font-size:18px}
+}
+@media screen and (max-width:480px) and (min-width:361px) {
+   .container-fluid{padding:0 2px}
+   *{font-size:16px}
+   .panel-heading span{font-size:18px;line-height:18px}
+   .panel-body{padding:3px 3px 3px 8px}
+   .page-header span{font-size:18px;line-height:18px}
+   .row{margin:0 auto}
+   .my-col-option span{font-size:18px}
+}
+@media screen and (max-width:360px) {
+   .container-fluid{padding:0}
+   *{font-size:14px}
+   .panel-heading span{font-size:16px}
+   .panel-body{font-size:14px}
+   .page-header span{font-size:16px;line-height:16px}
+   .row{margin:2px auto}
+   .my-col-option span{font-size:14px}
+}
+
+.container-fluid{padding:2px;padding-bottom:35px}
+
+.panel{margin-bottom:15px}
+.panel-heading{height:auto;padding:0;vertical-align:middle}
+.panel-heading span{color:white}
+.panel-body{padding:3px 3px 3px 8px}
+
+#btn-back{
+   vertical-align:middle;
+   width:80%;
+   padding:6px;
+   margin:auto;
+   margin-bottom:30px;
+   color:#286090;
+   border-radius:8px;
+   -webkit-box-shadow:1px 2px 5px rgba(0,0,0,0.1);
+   box-shadow:1px 2px 5px rgba(0,0,0,0.3);
+   display:none
+}
+#btn-back:hover{color:#ff5c10}
+#btn-back strong{vertical-align:middle;margin-top:-6px}
+#btn-back span{margin-left:5px;font-size:20px}
+
+.eachQues{padding-bottom:2px;margin:15px auto 0 auto;border:#d6e9c6 solid 1px;border-radius:5px}
+.page-header{height:auto;padding:0 0 0 10px;margin:0 auto;border-radius:5px}
+
+.eachAnswer{padding:0 6px;margin:5px auto}
+.row{width:100%}
+
+.my-col-option{padding:0}
+.my-col-progbar{padding:0;margin-top:5px}
+
+.progress{padding:0;margin:auto 0;}
+
+.progress-bar{border-radius:5px}
+.progress-bar-warning{border-radius:8px}
+
+

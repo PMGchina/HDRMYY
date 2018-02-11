@@ -1,0 +1,22 @@
+@media screen and (min-width:768px) {
+	.swiper-container{width:768px}
+}
+
+body{padding:2px;margin:0}
+.swiper-container{padding:0}
+.swiper-slide{
+	/*		background:url(../../image/web/flip-slide/84.jpg) no-repeat;
+			background-size:100% 100%;*/
+	border-radius:4px
+}
+.swiper-slide img{height:99.2%;width:100%;border-radius:3px}
+
+
+.swiper-button-prev,.swiper-button-next {
+	position:absolute;
+	left:50%;
+	z-index:10;
+	cursor:pointer
+}
+.swiper-button-prev {top:4%;background-image:url(../../image/web/flip-slide/touch-hand-up.png)}
+.swiper-button-next {top:95%;background-image:url(../../image/web/flip-slide/touch-hand-down.png)}

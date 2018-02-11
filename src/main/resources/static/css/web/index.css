@@ -1,0 +1,43 @@
+.my-top{
+	width:100%;
+	padding:0 15px;
+	margin:0 auto -2px auto;
+	vertical-align:middle;
+	border-radius:5px
+}
+
+@media screen and (min-width:769px) {
+	.table{width:768px;margin:auto}
+	.table tbody tr td{padding:8px 0;line-height:24px}
+	.form-group{padding-right:5%}
+	.modal{width:768px;margin:auto}
+	.my-top, .my-footer{width:768px}
+	*{font-size:18px;letter-spacing:4px}
+}
+@media screen and (max-width:768px) and (min-width:481px) {
+	.table{margin:0 auto}
+	.table tbody tr td{padding:5px 0;line-height:24px}
+	*{font-size:18px;letter-spacing:3px}
+}
+@media (max-width:480px) and (min-width:361px) {
+	.table{margin:0 auto}
+	.table tbody tr td{padding:4px 0;line-height:22px}
+	*{font-size:18px;letter-spacing:2px}
+}
+@media screen and (max-width:360px) {
+	.table{margin:0 auto}
+	.table tbody tr td{padding:3px;line-height:20px}
+	*{font-size:16px;letter-spacing:1px}
+}
+
+.my-top .container-fluid{line-height:45px;height:50px}
+.my-top .container-fluid ul{margin:0}
+
+.modal{padding:0 10px}
+
+.table tbody tr td{border:#fff solid 3px;border-radius:10px;vertical-align:middle}
+.table tbody tr td a{color:#286090;text-decoration:none}
+.table tbody tr td a:hover{color:#fff;text-decoration:none}
+.table tbody tr td a:focus{color:#286090;text-decoration:none}
+
+#adCarousel img{width:100%;border-radius:4px}

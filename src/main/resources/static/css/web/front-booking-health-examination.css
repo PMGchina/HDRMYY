@@ -1,0 +1,71 @@
+@media screen and (min-width:769px) {
+	.container-fluid{width:768px}
+	.modal{width:768px;margin:auto}
+	.my-footer{width:768px}
+	*{font-size:20px}
+	.modal-body{max-height:500px}
+	#infoModal form .form-group div input{font-size:20px}
+}
+@media screen and (max-width:768px) and (min-width:481px) {
+	*{font-size:20px}
+	#btn-guize{font-size:20px}
+	.modal-body{max-height:450px}
+	#infoModal form .form-group div input{font-size:20px}
+}
+@media screen and (max-width:480px) and (min-width:361px) {
+	*{font-size:20px}
+	#btn-guize{font-size:20px}
+	.modal-body{max-height:450px}
+	#infoModal form .form-group div input{font-size:20px}
+}
+@media screen and (max-width:360px) {
+	*{font-size:14px}
+	#btn-guize{font-size:16px}
+	.modal-body{max-height:300px}
+	#infoModal form .form-group div input{font-size:16px}
+}
+
+.container-fluid{padding:0}
+.container-fluid h2{color:#0099ff;margin-left:5px}
+
+.row{width:100%;padding:auto 0;margin:auto}
+
+.modal-header{height:45px;border-radius:5px}
+
+.modal-header button{font-size:30px;line-height:22px}
+.modal-header button span{font-size:30px;color:red}
+.modal-header-icon{margin:-3px 0 0 0;color:#2aabd2;text-shadow:1px 1px 5px rgba(0,0,0,.35);float:left}
+.modal-header-title{height:15px;margin-top:-5px;color:#ff5c10;text-shadow:0 1px 0 rgba(255,255,255,0.7)}
+
+.modal-body{padding:1px;overflow-y:auto}
+.modal-body .list-group {margin-bottom:0}
+.modal-body .list-group-item{padding:2px 8px}
+.modal-body .list-group-item label{color:#286090;font-weight:normal}
+.modal-body .list-group-item label input{margin-top:5px}
+.modal-body .list-group-item label:hover{color:#ff5c10}
+.modal-body .list-group-item span{margin-right:5px;color:#286090;font-weight:normal;float:right}
+.modal-body .list-group-item span strong{font-weight:normal}
+
+.modal-footer{height:45px;padding:5px 5% 0 5%}
+.modal-footer .btn {height:30px;font-size:20px;line-height:22px;border-radius:8px}
+
+#timeModal .modal-body .list-group-item{padding:2px 15px}
+
+#infoModal form{margin:5px 15px 0 0;color:#286090}
+#infoModal form .form-group{margin:5px 0}
+#infoModal form .form-group label{padding:0;font-weight:normal}
+#infoModal form .form-group div{padding-left:5px}
+#infoModal form .form-group div label{padding-left:20px;font-weight:normal}
+
+#btn-guize{
+	width:90%;
+	margin:10px auto;
+	color:#fff;
+	border-radius:10px;
+	-webkit-box-shadow:1px 2px 5px rgba(0,0,0,0.1);
+	box-shadow:1px 2px 5px rgba(0,0,0,0.3)
+}
+#btn-guize:hover{color:#ff5c10}
+
+#alertModal .acpdContent .row{padding:auto 0}
+#alertModal .acpdContent .row .mycol{padding:0}

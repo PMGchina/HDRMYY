@@ -1,0 +1,131 @@
+<%@page pageEncoding="UTF-8"%>
+<div class="modal in" id="alertModal" tabindex="-1" role="dialog" aria-hidden="true"
+     data-backdrop="static" data-keyboard="false" onclick="modalAnimation('random', 'alert')">
+   <div class="modal-dialog" id="alertDialog">
+      <div class="modal-content acpdModalContent">
+         <div class="acpdTopDecorate"></div>
+         <div class="modal-body acpdModalBody">
+            <div class="acpdTitle">
+               <span class="glyphicon glyphicon-warning-sign acpdTitleIcon"></span>
+               <span class="acpdTitleText"></span>
+               <button type="button" class="close pull-right" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="acpdContent">
+            </div>
+         </div>
+         <div class="modal-footer acpdModalFooter">
+            <button type="button" class="btn btn-xs btn-success" data-dismiss="modal">
+               <span class="glyphicon glyphicon-check"></span>&nbsp;确 定
+            </button>
+         </div>
+      </div>
+   </div>
+</div>
+<script>
+	$('#alertModal').on('shown.bs.modal', function () {
+		centerModals('alert');
+		modalAnimationBase('zoomInUp', 'alert');
+	});
+	$('#alertModal').on('hidden.bs.modal', function () {
+		$('#alertDialog').removeClass('random animated');
+	});
+</script>
+
+
+<div class="modal in" id="confirmModal" tabindex="-1" role="dialog" aria-hidden="true"
+     data-backdrop="static" data-keyboard="false" onclick="modalAnimation('wobble', 'confirm')">
+   <div class="modal-dialog" id="confirmDialog">
+      <div class="modal-content acpdModalContent">
+         <div class="acpdTopDecorate"></div>
+         <div class="modal-body acpdModalBody">
+            <div class="acpdTitle">
+               <span class="glyphicon glyphicon-eye-open acpdTitleIcon"></span>
+               <span class="acpdTitleText"></span>
+               <button type="button" class="close pull-right" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="acpdContent">
+            </div>
+            <div class="modal-footer acpdModalFooter">
+               <button type="button" class="btn btn-xs btn-default" data-dismiss="modal">
+                  <span class="glyphicon glyphicon-off"></span>&nbsp;取 消
+               </button>
+               <button type="button" class="btn btn-xs btn-success" data-dismiss="modal">
+                  <span class="glyphicon glyphicon-check"></span>&nbsp;确 定
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<script>
+	$('#confirmModal').on('shown.bs.modal', function () {
+		centerModals('confirm');
+		modalAnimationBase('zoomInUp', 'confirm');
+	});
+	$('#confirmModal').on('hidden.bs.modal', function () {
+		$('#confirmDialog').removeClass('wobble animated');
+	});
+</script>
+
+
+<div class="modal in" id="promptModal" tabindex="-1" role="dialog" aria-hidden="true"
+     data-backdrop="static" data-keyboard="false" onclick="modalAnimation('wobble', 'prompt')">
+   <div class="modal-dialog" id="promptDialog">
+      <div class="modal-content acpdModalContent">
+         <div class="acpdTopDecorate"></div>
+         <div class="modal-body acpdModalBody">
+            <div class="acpdTitle">
+               <span class="glyphicon glyphicon-eye-open acpdTitleIcon"></span>
+               <span class="acpdTitleText"></span>
+               <button type="button" class="close pull-right" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="acpdContent">
+            </div>
+            <div class="modal-footer acpdModalFooter">
+               <button type="button" class="btn btn-xs btn-default" data-dismiss="modal">
+                  <span class="glyphicon glyphicon-off"></span>&nbsp;取 消
+               </button>
+               <button type="button" class="btn btn-xs btn-success" data-dismiss="modal">
+                  <span class="glyphicon glyphicon-check"></span>&nbsp;提 交
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<script>
+	$('#promptModal').on('shown.bs.modal', function () {
+		centerModals('prompt');
+		modalAnimationBase('zoomInUp', 'prompt');
+	});
+	$('#promptModal').on('hidden.bs.modal', function () {
+		$('#promptDialog').removeClass('wobble animated');
+	});
+</script>
+
+
+<div class="modal in" id="dialogModal" tabindex="-1" role="dialog" aria-hidden="true" onclick="modalAnimation('wobble', 'dialog')">
+   <div class="modal-dialog" id="dialogDialog">
+      <div class="modal-content acpdModalContent">
+         <div class="acpdTopDecorate"></div>
+         <div class="modal-body acpdModalBody">
+            <div class="acpdTitle">
+               <span class="glyphicon glyphicon-eye-open acpdTitleIcon"></span>
+               <span class="acpdTitleText"></span>
+               <button type="button" class="close pull-right" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="acpdContent" style="margin-bottom:20px">
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<script>
+	$('#dialogModal').on('shown.bs.modal', function () {
+		centerModals('dialog');
+		modalAnimationBase('zoomInUp', 'dialog');
+	});
+	$('#dialogModal').on('hidden.bs.modal', function () {
+		$('#dialogDialog').removeClass('wobble animated');
+	});
+</script>

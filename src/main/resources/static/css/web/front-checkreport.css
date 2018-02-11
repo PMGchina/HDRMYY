@@ -1,0 +1,61 @@
+*{margin:0;padding:0;font-family:"Microsoft YaHei"}
+a,a:hover{text-decoration:none}
+
+@media screen and (min-width:769px) {
+	.container{width:768px}
+	.modal{width:768px;margin:auto}
+	.my-footer{width:768px}
+	*{font-size:18px}
+	.page-header span{font-size:22px}
+   .input-group input{font-size:18px}
+	.panel-title{font-size:20px}
+}
+@media screen and (max-width:768px) and (min-width:481px) {
+	*{font-size:16px}
+   .input-group input{font-size:16px}
+	.panel-title{font-size:18px}
+}
+@media screen and (max-width:480px) and (min-width:361px) {
+	*{font-size:14px}
+   .input-group input{font-size:14px}
+	.panel-title{font-size:16px}
+}
+@media screen and (max-width:360) {
+	*{font-size:12px}
+   .input-group input{font-size:12px}
+	.panel-title{font-size:14px}
+}
+
+.container{padding: 1px 0}
+
+.page-header{padding:1px 0 3px 0;margin:0;border-radius:3px}
+.page-header span{
+	font-size:18px;
+	color:#026fda;
+	font-weight:bold;
+	text-shadow:1px 1px 0 rgba(255,255,255,0.5)
+}
+
+.my-date-row{width:100%;padding:0;margin:5px auto 0 auto}
+.input-group input{color:#761c19}
+#btn-select-date{width:100%;color:#bf9900}
+#btn-select-date:hover{color:#ff5c10}
+
+.panel{margin:-8px 0 8px 0;box-shadow:0 1px 2px rgba(0,0,0,0.1)}
+.panel-heading{padding:0 0 8px 5px}
+.panel-heading .panel-title{
+	margin-left:5px;
+	color:#ff5c10;
+	font-weight:bold;
+	text-shadow:0 1px 0 rgba(255,255,255,0.7)
+}
+.panel-collapse{padding:1px 1px 5px 1px}
+.panel-collapse .row{width:100%;margin:auto}
+.panel-collapse .row div{padding:2px 0;color:#204d74}
+.panel-collapse .row .my-label{padding-left:3px}
+.panel-collapse hr{margin:1px 0}
+
+.btn-group{width:100%}
+.btn-group .btn{color:#bf9900;border:#fff solid 1px;border-radius:5px}
+.btn-group .btn:hover{color:#ff5c10}
+.btn-group .btn strong{margin:auto 2px}

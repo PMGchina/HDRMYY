@@ -1,0 +1,20 @@
+.modal-header{height:45px;border-radius:5px}
+
+.modal-header button{font-size:30px;line-height:22px}
+.modal-header button span{font-size:30px;color:red}
+
+.modal-header-icon{margin:-3px 0 0 0;color:#2aabd2;text-shadow:1px 1px 5px rgba(0,0,0,.35);float:left}
+
+.modal-header-title{height:15px;margin-top:-5px;color:#ff5c10;text-shadow:0 1px 0 rgba(255,255,255,0.7)}
+
+.modal-body{max-height:440px;padding:1px;overflow-y:auto}
+.modal-body .list-group{margin-bottom:0}
+
+.list-group-item img{height:30px;margin-top:-5px}
+
+.list-group-item strong{margin-left:5px;color:#286090;font-weight:normal}
+.list-group-item span{margin-right:5px;color:#AA8926;font-size:32px;line-height:20px;float:right}
+.list-group-item strong:hover,.menulist .list-group-item span:hover{color:#ff5c10}
+
+.modal-footer{height:45px;padding:5px 5% 0 5%}
+.modal-footer .btn {height:30px;font-size:20px;line-height:22px;border-radius:8px}

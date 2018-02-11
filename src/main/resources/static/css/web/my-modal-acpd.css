@@ -1,0 +1,45 @@
+.modal{padding:0 10px}
+.modal-dialog{margin:auto}
+
+.acpdModalContent{border-radius:15px;overflow:hidden}
+
+.acpdTopDecorate{
+	width:98%;
+	height:15px;
+	margin:0 auto;
+	-moz-border-radius:100%/10%;
+	-webkit-border-radius:100%/10%;
+	border-radius:100%/15px;
+	margin-top:-6px
+}
+
+.acpdModalBody{padding:0 15px}
+
+.acpdTitle{margin-bottom:5px;vertical-align:middle}
+.acpdTitle button{font-size:30px;line-height:28px}
+.acpdTitle button:hover{
+	transition: .75s;
+	transform:rotate(-360deg);
+	-webkit-transform:rotate(-360deg);
+}
+.acpdTitle button span{font-size:26px;color:brown}
+
+.acpdTitleIcon{vertical-align:middle;margin-top:-10px;font-size:22px;line-height:32px}
+.acpdTitleText{font-size:22px;line-height:32px}
+
+.acpdContent{max-height:440px;margin-left:5px;color:#286090;overflow-y:auto}
+
+.acpdModalFooter{height:45px;padding:5px 5% 0 5%;margin-top:5px;border-top:none}
+.acpdModalFooter button{height:30px;font-size:20px;line-height:22px;border-radius:8px}
+.acpdModalFooter button:hover{color:#ff5c10}
+
+/* 个性显示 */
+#alertDialog .acpdTopDecorate{background-color:#ff5c10}
+#confirmDialog .acpdTopDecorate{background-color:#AA8926}
+#promptDialog .acpdTopDecorate{background-color:#0099ff}
+#dialogDialog .acpdTopDecorate{background-color:yellowgreen}
+
+#alertDialog .acpdTitleIcon, #alertDialog .acpdTitleText{color:#ff5c10}
+#confirmDialog .acpdTitleIcon, #confirmDialog .acpdTitleText{color:#AA8926}
+#promptDialog .acpdTitleIcon, #promptDialog .acpdTitleText{color:#0099ff}
+#dialogDialog .acpdTitleIcon, #dialogDialog .acpdTitleText{color:yellowgreen}

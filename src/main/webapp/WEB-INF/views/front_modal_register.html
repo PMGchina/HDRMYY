@@ -1,0 +1,56 @@
+<%@page pageEncoding="UTF-8"%>
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" 
+     aria-hidden="true" data-backdrop="static" data-keyboard="false">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header my-panel-success text-center">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
+				<span class="glyphicon glyphicon-user modal-header-icon"></span>
+				<h3 class="modal-header-title" id="doctorModalLabel">用 户 注 册</h3>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="fullname" class="col-xs-2 control-label"><span class="mustFill">*</span>姓名:</label>
+						<div class="col-xs-10">
+							<input type="text" class="form-control" id="fullname" placeholder="请输入姓名...">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="gender" class="col-xs-2 control-label"><span class="mustFill">*</span>性别:</label>
+						<label class="col-xs-2 control-label"><input type="radio" name="gender" value="man" checked>男</label>
+						<label class="col-xs-2 control-label"><input type="radio" name="gender" value="woman">女</label>
+					</div>
+					<div class="form-group">
+						<label for="mobileno" class="col-xs-2 control-label"><span class="mustFill">*</span>手机:</label>
+						<div class="col-xs-10">
+							<input type="text" class="form-control" id="mobileno" placeholder="请输入手机号...">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="verificationcode" class="col-xs-2 control-label"><span class="mustFill">*</span>验证:</label>
+						<div class="col-xs-6">
+							<input type="text" class="form-control" id="verificationcode" placeholder="请输入验证码...">
+						</div>
+						<div class="col-xs-4">
+							<button type="button" class="btn btn-info" style="margin-top:-3px">获取验证码</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-xs btn-default" data-dismiss="modal">
+					<span class="glyphicon glyphicon-remove-circle"></span>&nbsp;取消
+				</button>
+				<button type="submit" class="btn btn-xs btn-success">
+					<span class="glyphicon glyphicon-ok"></span>&nbsp;提交注册
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$('#loginModal').on('shown.bs.modal', function () {
+		centerModals('login')
+	});
+</script>

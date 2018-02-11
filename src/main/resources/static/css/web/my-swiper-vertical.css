@@ -1,0 +1,61 @@
+@media screen and (min-width:768px) {
+	.swiper-container{width:768px}
+}
+
+/* swiper */
+body{padding:2px;margin:0}
+.swiper-container{padding:0}
+.swiper-slide{
+	/*	background:url(../../image/web/flip-slide/84.jpg) no-repeat center;
+		background-size:100% 100%;*/
+	border-radius:4px
+}
+.swiper-slide img{height:99.5%;width:100%;border-radius:3px}
+
+/* 向上箭头 */
+.arrow_top{
+	position:absolute;
+	height:45px;
+	width:44px;
+	left:50%;
+	bottom:50px;
+	z-index:99
+}
+.arrow_top span{
+	height:45px;
+	width:44px;
+	background:url(../../image/web/flip-slide/touch-hand-slide-ud.png) no-repeat;
+	display:inline-block;
+	-webkit-animation:arrowtop 3s infinite ease-in-out;
+	animation:arrowtop 3s infinite ease-in-out;
+	opacity:1
+}
+@-webkit-keyframes arrowtop{
+	0%,20%{
+		opacity:0;
+		-webkit-transform:translate3d(0,16px,0);
+		transform:translate3d(0,16px,0)
+	}60%{
+		opacity:1;
+		-webkit-transform:translate3d(0,0,0);
+		transform:translate3d(0,0,0)
+	}100%{
+		opacity:0;
+		-webkit-transform:translate3d(0,-12px,0);
+		transform:translate3d(0,-12px,0)}
+}
+@keyframes arrowtop{
+	0%,20%{
+		opacity:0;
+		-webkit-transform:translate3d(0,16px,0);
+		transform:translate3d(0,16px,0)
+	}60%{
+		opacity:1;
+		-webkit-transform:translate3d(0,0,0);
+		transform:translate3d(0,0,0)
+	}100%{
+		opacity:0;
+		-webkit-transform:translate3d(0,-12px,0);
+		transform:translate3d(0,-12px,0)
+	}
+}

@@ -1,0 +1,49 @@
+@media screen and (min-width:769px) {
+	.container{width:768px}
+	.my-footer{width:768px}
+	*{font-size:20px}
+}
+@media screen and (max-width:768px) and (min-width:480px) {
+	.container{padding:1px}
+	*{font-size:20px}
+}
+@media screen and (max-width:480px) and (min-width:361px) {
+	.container{padding:1px}
+	*{font-size:20px}
+}
+@media screen and (max-width:360px) {
+	.container{padding:1px}
+	*{font-size:14px}
+}
+
+.container{padding:1px;padding-bottom:20px}
+
+.page-header{height:36px;margin:0 auto;border-radius:5px}
+.page-header span{
+	color:#AA8926;font-size:24px;font-weight:bold;
+	text-shadow:1px 1px 3px rgba(255,255,255,0.8)
+}
+
+.row{
+	width:100%;
+	padding:5px;
+	margin:auto;
+	color:#286090;
+	border:#EAEAEA solid 1px;
+	border-top:none;
+	border-radius:5px
+}
+.row div{padding:0;margin:0}
+.row div img{height:35px;margin-right:3px;border-radius:3px}
+.row .mySchedule{padding-right:5px}
+
+.btn-group{margin:15px auto 30px auto}
+.btn-group button{
+	vertical-align:middle;
+	padding:5px;
+	color:#286090;
+	border-radius:8px
+}
+.btn-group button:hover{color:#ff5c10}
+.btn-group button strong{vertical-align:middle;margin-top:-6px}
+.btn-group button span{margin-left:5px;font-size:20px}

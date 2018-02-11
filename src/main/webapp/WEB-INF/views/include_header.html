@@ -1,0 +1,50 @@
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ page isELIgnored="false"%>
+<%@ include file="include_taglib.jsp"%>
+
+<nav class="navbar my-panel-warning my-top" role="navigation">
+   <div class="container-fluid">
+      <sec:authorize access="hasAnyRole('ADMIN','MANAGER')">
+         <ul class="navbar-nav navbar-right">
+            <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown">
+                  <img class="img-circle" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/20/h/20/q/80" alt=""/> ${sessionScope.CURRENT_USER.nickname}
+                  <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+                  <li><a href="#">个人中心</a></li>
+                  <li><a href="#" onclick="window.location.href = '${pageContext.request.contextPath }/admin/adminIndex'">后台管理</a></li>
+                  <li><a href="#" onclick="window.location.href = 'logout'">退出</a></li>
+               </ul>
+            </li>
+         </ul>
+      </sec:authorize>
+
+      <sec:authorize access="hasAnyRole('NORMAL')">
+         <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown">
+                  <img class="img-circle img-thumbnail" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/20/h/20/q/80" alt=""/> ${sessionScope.CURRENT_USER.nickname}
+                  <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+                  <li><a href="#">个人中心</a></li>
+                  <li><a href="#" onclick="window.location.href = 'logout'">退出</a></li>
+               </ul>
+            </li>
+         </ul>
+      </sec:authorize>
+
+      <c:if test="${sessionScope.CURRENT_USER==null}">
+         <!--
+         <div class="nav navbar-nav navbar-right">
+            <button class="btn btn-primary topbar-btn btn-sm" onclick="window.location.href = 'login'">登录</button>
+            data-toggle="modal" data-target="#loginModal"
+         </div>
+         -->
+         <div class="navbar-right">
+            <button class="btn btn-primary topbar-btn btn-sm" data-toggle="modal" data-target="#loginModal">登录</button>
+         </div>
+      </c:if>
+   </div>
+</nav>

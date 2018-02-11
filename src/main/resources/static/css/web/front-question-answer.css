@@ -1,0 +1,155 @@
+* {margin:0;padding:0;font-family:"Microsoft YaHei"}
+a {
+	text-decoration:none;
+	color:#265a88;
+	/*	-webkit-transition:0.4s ease-in-out;
+		-moz-transition:0.4s ease-in-out;
+		-ms-transition:0.4s ease-in-out;
+		-o-transition:0.4s ease-in-out;
+		transition:0.4s ease-in-out*/
+}
+a:hover {text-decoration:none;color:#ff5c10}
+a,img {border:none}
+img {vertical-align:middle}
+ul,li {list-style:none}
+em,i {font-style:normal}
+
+@media screen and (min-width:769px) {
+	.container{width:768px}
+	.modal{width:768px;margin:auto}
+	.my-footer{width:768px}
+	*{font-size:20px}
+	.ks-select{font-size:20px}
+}
+@media screen and (max-width:768px) and (min-width:481px) {
+	.container{padding:0 2px}
+	*{font-size:18px}
+	.ks-select{font-size:18px}
+}
+@media screen and (max-width:480px) and (min-width:361px) {
+	.container{padding:0 2px}
+	*{font-size:16px}
+	.ks-select{font-size:16px}
+}
+@media screen and (max-width:360px) {
+	.container{padding:0}
+	*{font-size:14px}
+	.ks-select{font-size:14px}
+}
+
+.container{padding:1px;padding-bottom:40px}
+
+/* 题和制作操作键 */
+.newQuesArea{padding:0;margin-top:5px}
+.makeQuesArea{padding:0 20px}
+
+.makeQuesBtns{margin-top:10px}
+.makeQuesBtns button{height:32px;padding:0;margin:auto 10px;margin-left:8px}
+.makeQuesBtns button span{padding:0 8px;font-size:20px}
+
+/* 问卷题目区*/
+.questionnaire{
+	position:relative;
+	padding:1px;
+	/*	padding:0 4px;*/
+	/*background-color:#AFD788;*/
+	/*	line-height:28px;*/
+	border:#d6e9c6 solid 1px;
+	border-radius:5px;
+	-webkit-box-shadow:0 1px 2px rgba(0,0,0,.07);
+	box-shadow:0 1px 2px rgba(0,0,0,.07);
+	overflow:hidden;
+}
+.list-group{margin-bottom:0}
+.list-group-item{padding:5px}
+.qnTitle{color:#ff5c10;text-shadow:0 1px 0 rgba(255,255,255,0.7)}
+.qnDescription{color:#265a88;padding:5px 10px}
+
+.ks-row{width:100%;margin-top:10px}
+.ks-select{height:auto;margin-left:5px;color:#026fda}
+.ks-must{padding:auto 0;color:#ff5c10;text-align:left}
+
+/* 每个题部分 */
+.eachQues{
+	position:relative;
+	padding:0 3px 3px 3px;
+	margin:5px 0;
+	border:1px solid #fff
+}
+
+.eachQuesUl{
+	margin:5px 0;
+	padding-bottom:2px;
+	border:#bce8f1 solid 1px;
+	border-radius:5px;
+	-webkit-box-shadow:0 1px 2px rgba(0,0,0,.07);
+	box-shadow:0 1px 2px rgba(0,0,0,.07);
+	overflow:hidden
+}
+
+.eachQuesUl li {line-height:26px}
+.eachQuesUl .lipadding{padding:5px 5px 0 20px}
+.eachQuesUl .lipadding textarea{height:120px;width:100%;padding:2px 8px;margin-left:-10px;color:#265a88;border-radius:5px}
+.eachQuesUl .lipadding label{color:#265a88;cursor:pointer}
+.eachQuesUl .lipadding label input {vertical-align:middle;margin-top:-3px}
+.eachQuesUl .lipadding label span {font-weight:normal}
+.eachQuesUl .lipadding .quesFill {
+	width:50%;
+	padding-left:5px;
+	margin-left:10px;
+	line-height:26px;
+	border:#bce8f1 solid 1px;
+	border-radius:5px
+}
+
+.eachQuesUl .quesTitle{
+	height:auto;	/*35px*/
+	padding:3px 0 3px 10px;
+	background-image:-webkit-linear-gradient(top,#dff0d8 0%,#d0e9c6 100%);
+	background-image:-o-linear-gradient(top,#dff0d8 0%,#d0e9c6 100%);
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#dff0d8),to(#d0e9c6));
+	background-image:linear-gradient(to bottom,#dff0d8 0%,#d0e9c6 100%);
+	background-repeat:repeat-x;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdff0d8',endColorstr='#ffd0e9c6',GradientType=0);
+}
+.eachQuesUl .quesTitle .titleNo, .titleText{color:#026fda}
+.eachQuesUl .quesTitle .titleTip {color:#026fda;line-height:20px}
+.eachQuesUl .quesTitle .titleAnswer{color:#ff5c10}
+
+/* 评分starScore */
+.block .star_score {margin:8px 0;float:left}
+.star_score {
+	position:relative;
+	height:21px;
+	width:160px;
+	padding-left:32px;
+	background:url(../../image/web/question/stark2.png)
+}
+.star_score a {
+	height:21px;
+	display:block;
+	text-indent:-999em;
+	position:absolute;
+	left:0
+}
+.star_score a:hover {background:url(../../image/web/question/stars2.png);left:0}
+.star_score a.clibg {background:url(../../image/web/question/stars2.png);left:0}
+.fenshu {
+	margin:0 8px;
+	color:#026fda;
+	font-weight:bold;
+	line-height:38px
+}
+.starClean{
+	padding:0 5px;
+	margin-left:5px;
+	cursor:pointer;
+	border:#AA8926 solid 1px;
+	border-radius:5px;
+	line-height:38px
+}
+.starClean:hover{color:#ff5c10}
+
+/* 编辑部分 */
+.inputText {padding-left:10px;margin:0 1% 0 0.5%}
+.inputTextarea {height:auto;width:99%;padding-top:6px}

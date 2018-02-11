@@ -1,0 +1,32 @@
+@media screen and (min-width:769px) {
+	.container-fluid{width:768px}
+	.my-footer{width:768px}
+	*{font-size:20px}
+}
+@media screen and (max-width:768px) and (min-width:481px) {
+	.container-fluid{padding:0}
+	*{font-size:20px}
+}
+@media screen and (max-width:480px) and (min-width:361px) {
+	.container-fluid{padding:0}
+	*{font-size:20px}
+}
+@media screen and (max-width:360px) {
+	.container-fluid{padding:0}
+	*{font-size:14px}
+}
+
+.page-header{padding-top:5px;margin:0 auto;border-radius:2px}
+.page-header span{
+	color:#AA8926;
+	font-size:24px;
+	font-weight:bold;
+	text-shadow:1px 1px 0 rgba(255,255,255,0.7)
+}
+
+#adCarousel img{width:100%;border-radius:2px}
+
+.list-group-item img{height:30px;margin-top:-5px}
+.list-group-item strong{margin-left:5px;color:#286090;font-weight:normal}
+.list-group-item strong:hover,.menulist span:hover{color:#ff5c10}
+.list-group-item span{margin-right:5px;color:#AA8926;font-size:32px;line-height:20px;float:right}

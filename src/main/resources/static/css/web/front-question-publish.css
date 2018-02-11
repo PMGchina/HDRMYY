@@ -1,0 +1,52 @@
+* {margin:0;padding:0;font-family:"Microsoft YaHei"}
+
+@media screen and (min-width:769px) {
+	.container-fluid{width:768px}
+	.modal{width:768px;margin:auto}
+	.my-footer{width:768px}
+	*{font-size:20px}
+}
+@media screen and (max-width:768px) and (min-width:481px) {
+	.container-fluid{padding:0 2px}
+	*{font-size:20px}
+}
+@media screen and (max-width:480px) and (min-width:361px) {
+	.container-fluid{padding:0 2px}
+	*{font-size:20px}
+}
+@media screen and (max-width:360px) {
+	.container-fluid{padding:0}
+	*{font-size:14px}
+}
+
+.container-fluid{padding:2px;padding-bottom:35px}
+
+.page-header{padding-top:5px;margin:0 auto;border-radius:5px}
+.page-header span{
+	color:#fff;
+	font-size:28px;
+	font-weight:bold;
+	text-shadow:1px 1px 0 rgba(0,0,0,0.6)
+}
+
+.list-group{margin-top:3px;margin-bottom:12px}
+.list-group-item{cursor:pointer}
+.list-group-item strong{color:#286090;font-weight:normal}
+.list-group-item strong:hover{color:#ff5c10}
+.list-group-item span{margin-right:5px;color:#AA8926;font-size:32px;line-height:20px;float:right}
+
+#btn-back{
+	vertical-align:middle;
+	width:80%;
+	padding:6px;
+	margin:auto;
+	margin-bottom:30px;
+	color:#286090;
+	border-radius:8px;
+	-webkit-box-shadow:1px 2px 5px rgba(0,0,0,0.1);
+	box-shadow:1px 2px 5px rgba(0,0,0,0.3);
+	display:none
+}
+#btn-back:hover{color:#ff5c10}
+#btn-back strong{vertical-align:middle;margin-top:-6px}
+#btn-back span{margin-left:5px;font-size:20px}

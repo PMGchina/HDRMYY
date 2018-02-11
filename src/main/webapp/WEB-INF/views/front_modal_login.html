@@ -1,0 +1,85 @@
+<%@page pageEncoding="UTF-8"%>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+     aria-hidden="true" data-backdrop="static" data-keyboard="false">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <form method="post" class="form-horizontal" action="login">
+            <div class="modal-header my-panel-warning text-center">
+               <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
+               <span class="glyphicon glyphicon-user modal-header-icon"></span>
+               <h3 class="modal-header-title" id="loginModalLabel">用 户 登 录</h3>
+            </div>
+            <div class="modal-body">
+               <div class="form-group">
+                  <label for="username" class="col-xs-3 control-label"><span class="mustFill">*</span>就诊卡:</label>
+                  <div class="col-xs-9">
+                     <input type="text" class="form-control" name="username" id="username" value="tom">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label for="password" class="col-xs-3 control-label"><span class="mustFill">*</span>密  码:</label>
+                  <div class="col-xs-9">
+                     <input type="password" class="form-control" name="password" id="password">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="col-xs-offset-3 col-xs-9">
+                     <label class="rememberMe"><input type="checkbox" name="remember-me" id="remember-me">请记住我</label>
+                  </div>
+               </div>
+
+               <c:set var="message" value="${sessionScope.SPRING_SECURITY_LAST_EXCEPTION.message}" />
+               <c:set var="expired" value="${expired}" />
+               <c:choose>
+                  <c:when test="${not empty message}">
+                     <div class="alert alert-warning" data-alert>
+                        <button type="button" class="close">&times;</button>
+                        <c:out value="${ message }" />
+                     </div>
+                  </c:when>
+                  <c:otherwise>
+                     <c:if test="${not empty expired}">
+                        <div class="alert alert-warning" data-alert>
+                           <button type="button" class="close">&times;</button>
+                           <c:out value="${expired}" />
+                        </div>
+                     </c:if>
+                     <c:out value=" " />
+                  </c:otherwise>
+               </c:choose>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-xs btn-default" data-dismiss="modal">
+                  <span class="glyphicon glyphicon-off"></span>&nbsp;关 闭
+               </button>
+               <button type="submit" class="btn btn-xs btn-success" onclick="clickSubmit()">
+                  <span class="glyphicon glyphicon-log-in"></span>&nbsp;登 录
+               </button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+<script>
+	//$('#loginModal').find('#remember-me').attr("checked", true);
+
+	$('#loginModal').on('shown.bs.modal', function () {
+		centerModals('login');
+		if (typeof (Storage) !== "undefined") {   //浏览器支持localStorage和sessionStorage对象
+			var un = localStorage.userName;
+			//var un = localStorage.getItem("userName");
+			if (un !== undefined) {
+				$('#loginModal').find('#username').val(un);
+			}
+		}
+	});
+
+	function clickSubmit() {
+		if ($('#loginModal').find('#remember-me').is(":checked")) {
+			localStorage.userName = $('#loginModal').find('#username').val();
+			//localStorage.setItem("userName", $('#loginModal').find('#username').val());
+		} else {
+			//localStorage.removeItem("userName");
+		}
+	}
+</script>

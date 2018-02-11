@@ -1,0 +1,59 @@
+<%@page pageEncoding="UTF-8"%>
+<div class="modal fade" id="bindCardModal" tabindex="-1" role="dialog" aria-labelledby="bindCardModalLabel" 
+     aria-hidden="true" data-backdrop="static" data-keyboard="false">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header my-panel-info text-center">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
+				<span class="glyphicon glyphicon-user modal-header-icon"></span>
+				<h3 class="modal-header-title" id="doctorModalLabel">绑 定 就 诊 卡</h3>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="fullname" class="col-xs-2 control-label">姓名:</label>
+						<div class="col-xs-10">
+							<input type="text" class="form-control" id="fullname" disabled>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="gender" class="col-xs-2 control-label">性别:</label>
+						<label class="col-xs-2 control-label"><input type="radio" name="gender" value="man" checked disabled>男</label>
+						<label class="col-xs-2 control-label"><input type="radio" name="gender" value="woman" disabled>女</label>
+					</div>
+					<div class="form-group">
+						<label for="mobileno" class="col-xs-2 control-label">手机:</label>
+						<div class="col-xs-10">
+							<input type="text" class="form-control" id="mobileno" disabled>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="identityCard" class="col-xs-3 control-label"><span class="mustFill">*</span>身份证:</label>
+						<div class="col-xs-9">
+							<input type="text" class="form-control" id="identityCard" placeholder="请输入身份证号...">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="seeDoctorCard" class="col-xs-3 control-label"><span class="mustFill">*</span>就诊卡:</label>
+						<div class="col-xs-9">
+							<input type="text" class="form-control" id="seeDoctorCard" placeholder="请输入就诊卡号...">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-xs btn-default" data-dismiss="modal">
+					<span class="glyphicon glyphicon-remove-circle"></span>&nbsp;取消
+				</button>
+				<button type="submit" class="btn btn-xs btn-success">
+					<span class="glyphicon glyphicon-link"></span>&nbsp;绑定
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$('#bindCardModal').on('shown.bs.modal', function () {
+		centerModals('bindCard');
+	});
+</script>

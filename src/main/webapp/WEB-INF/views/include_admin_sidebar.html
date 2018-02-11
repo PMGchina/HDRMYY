@@ -1,0 +1,199 @@
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
+<link rel="stylesheet" href="${pageContext.request.contextPath }/static/BOOTSTRAP/css/bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/static/AMAZEUI/css/amazeui.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/static/AMAZEUI/css/admin.css">
+
+<script src="${pageContext.request.contextPath }/static/AMAZEUI/js/jquery.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/BOOTSTRAP/js/bootstrap.min.js"></script>
+
+<div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
+
+   <div class="am-offcanvas-bar admin-offcanvas-bar">
+      <ul class="am-list admin-sidebar-list">
+         <li onclick="loadContent('${pageContext.request.contextPath}/admin/adminIndexContent')">
+         	<a href="javascript: void(0)"><span class="am-icon-home"></span> 首页 </a>
+         </li>
+
+         <sec:authorize access="hasPermission('user','user:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/user/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-users"></span> 用户管理 </a>
+            </li>
+         </sec:authorize>
+
+         <sec:authorize access="hasPermission('role','role:list') or hasPermission('role','role:roleuser')">
+            <li class="admin-parent">
+               <a class="am-cf" href="javascript: void(0)" data-toggle="collapse" data-target="#collapse-nav-role">
+                  <span class="am-icon-wheelchair-alt"></span> 角色管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+               <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav-role">
+                  <sec:authorize access="hasPermission('role','role:list')">
+                     <li onclick="loadContent('${pageContext.request.contextPath}/admin/role/adminList')">
+                        <a href="javascript: void(0)" class="am-cf"><span class="am-icon-list-ol"></span> 角色列表</a>
+                     </li>
+                  </sec:authorize>
+
+                  <sec:authorize access="hasPermission('role','role:roleuser')">
+                     <li onclick="loadContent('${pageContext.request.contextPath}/admin/role/adminListWithUsers')">
+                        <a href="javascript: void(0)"><span class="am-icon-puzzle-piece"></span> 用户角色</a>
+                     </li>
+                  </sec:authorize>
+               </ul>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('permission','permission:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/permission/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-university"></span> 权限管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('department','department:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/department/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-th"></span> 科室管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('doctor','doctor:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/doctor/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-user-md"></span> 医生管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('scheduling','scheduling:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/scheduling/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-clock-o"></span> 出诊时间表管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('patient','patient:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/patient/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-tripadvisor"></span> 患者管理</a>
+            </li>
+         </sec:authorize>
+
+         <sec:authorize access="hasPermission('questionnaire','questionnaire:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/questionnaire/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-leanpub"></span> 问卷管理</a>
+            </li>
+         </sec:authorize>
+
+         <sec:authorize access="hasPermission('question','question:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/question/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-leanpub"></span> 问题管理</a>
+            </li>
+         </sec:authorize>
+
+         <sec:authorize access="hasPermission('answer','answer:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/answer/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-leanpub"></span> 答案管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('questionnaireUser','questionnaireUser:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/questionnaireUser/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-leanpub"></span> 问卷用户关联管理</a>
+            </li>
+         </sec:authorize>
+
+         <sec:authorize access="hasPermission('questionType','questionType:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/questionType/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-leanpub"></span> 问题类型管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('bookingRegistration','bookingRegistration:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/bookingRegistration/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-outdent"></span> 预约挂号管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('healthExaminationPackage','healthExaminationPackage:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/healthExaminationPackage/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-calendar-plus-o"></span> 体检套餐管理</a>
+            </li>
+         </sec:authorize>
+
+         <sec:authorize access="hasPermission('healthExaminationItem','healthExaminationItem:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/healthExaminationItem/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-calendar-plus-o"></span> 体检项管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('bookingHealthExamination','bookingHealthExamination:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/bookingHealthExamination/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-calendar-plus-o"></span> 预约体检管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('healthExaminationExpert','healthExaminationExpert:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/healthExaminationExpert/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-calendar-plus-o"></span> 体检专家组成员管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('reexaminationItem','reexaminationItem:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/reexaminationItem/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-flask"></span> 复查项目管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('bookingReexamination','bookingReexamination:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/bookingReexamination/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-calendar"></span> 定期复查管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('director','director:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/director/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-user-secret"></span> 主任风采管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('departmentConstruction','departmentConstruction:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/departmentConstruction/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-ils"></span> 科室建设管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('healthEducation','healthEducation:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/healthEducation/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-newspaper-o"></span> 健康宣教管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('seekingTreatStrategy','seekingTreatStrategy:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/seekingTreatStrategy/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-newspaper-o"></span> 就医攻略管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('guidingTreat','guidingTreat:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/guidingTreat/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-newspaper-o"></span> 门诊导医管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('inpatientService','inpatientService:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/inpatientService/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-plus-circle"></span> 住院服务管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('messageBoard','messageBoard:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/messageBoard/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-desktop"></span> 便民服务(留言板)管理</a>
+            </li>
+         </sec:authorize>
+         
+         <sec:authorize access="hasPermission('hospitalEvent','hospitalEvent:list')">
+            <li onclick="loadContent('${pageContext.request.contextPath}/admin/hospitalEvent/adminList')">
+               <a href="javascript: void(0)"><span class="am-icon-forumbee"></span> 院内大事件管理</a>
+            </li>
+         </sec:authorize>
+
+         <li><a href="${pageContext.request.contextPath}/logout"><span class="am-icon-sign-out"></span> 注销</a></li>
+      </ul>
+   </div>
+
+</div>
