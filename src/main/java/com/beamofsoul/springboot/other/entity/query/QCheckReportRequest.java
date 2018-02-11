@@ -1,6 +1,6 @@
 package com.beamofsoul.springboot.other.entity.query;
 
-import com.beamofsoul.springboot.entity.QBaseAbstractEntity;
+import com.beamofsoul.springboot.entity.query.QBaseAbstractEntity;
 import com.beamofsoul.springboot.other.entity.CheckReportRequest;
 import static com.querydsl.core.types.PathMetadataFactory.*;
 

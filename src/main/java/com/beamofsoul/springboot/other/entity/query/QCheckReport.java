@@ -1,6 +1,6 @@
 package com.beamofsoul.springboot.other.entity.query;
 
-import com.beamofsoul.springboot.entity.QBaseAbstractEntity;
+import com.beamofsoul.springboot.entity.query.QBaseAbstractEntity;
 import com.beamofsoul.springboot.other.entity.CheckReport;
 import com.beamofsoul.springboot.other.entity.CheckReportDetail;
 import static com.querydsl.core.types.PathMetadataFactory.*;
@@ -27,7 +27,7 @@ public class QCheckReport extends EntityPathBase<CheckReport> {
 
    public final StringPath barcodeNo = createString("barcodeNo");
 
-   public final SetPath<CheckReportDetail, com.beamofsoul.springboot.other.entity.QCheckReportDetail> checkReportDetail = this.<CheckReportDetail, com.beamofsoul.springboot.other.entity.QCheckReportDetail>createSet("checkReportDetail", CheckReportDetail.class, com.beamofsoul.springboot.other.entity.QCheckReportDetail.class, PathInits.DIRECT2);
+   public final SetPath<CheckReportDetail, QCheckReportDetail> checkReportDetail = this.<CheckReportDetail, QCheckReportDetail>createSet("checkReportDetail", CheckReportDetail.class, QCheckReportDetail.class, PathInits.DIRECT2);
 
    //inherited
    public final DateTimePath<java.util.Date> createDate = _super.createDate;

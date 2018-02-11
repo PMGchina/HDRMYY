@@ -1,6 +1,6 @@
 package com.beamofsoul.springboot.other.service.impl;
 
-import com.beamofsoul.springboot.other.entity.QReexaminationItem;
+import com.beamofsoul.springboot.other.entity.query.QReexaminationItem;
 import java.util.List;
 
 import org.springframework.beans.BeanUtils;
