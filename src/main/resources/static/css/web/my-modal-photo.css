@@ -2,6 +2,11 @@
 
 .modal-header button{font-size:30px;line-height:18px}
 .modal-header button span{font-size:32px;color:blue}
+.modal-header button:hover{
+	transition: .75s;
+	transform:rotate(-360deg);
+	-webkit-transform:rotate(-360deg);
+}
 
 .modal-header-icon{margin:-3px 0 0 0;color:#2aabd2;text-shadow:1px 1px 5px rgba(0,0,0,.35);float:left}
 .modal-header-title{height:12px;margin-top:-4px;color:#ff5c10;text-shadow:0 1px 0 rgba(255,255,255,0.7)}

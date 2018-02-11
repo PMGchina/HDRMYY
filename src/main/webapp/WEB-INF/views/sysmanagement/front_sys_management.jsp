@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>个人中心</title>
+		<title>管理中心</title>
 
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/BOOTSTRAP/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/web/front-comm.css">
@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-			<div class="page-header my-panel-success text-center"><span>个 人 中 心</span></div>
+			<div class="page-header my-panel-success text-center"><span>管 理 中 心</span></div>
 
 			<div id="adCarousel" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
